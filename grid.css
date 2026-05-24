@@ -5,15 +5,18 @@ html{
     font-size: 100%;
 }
 
-p,h1,h2,h3,h4,h5,h6 {line-height: 1.3rem;} /* Gör texten luftigare och lättare att läsa */
+p,h3,h4,h5,h6 {line-height: 1.3rem;} /* Gör texten luftigare och lättare att läsa */
 p{font-size: 1.1rem;}
-h2{font-size: 1.3rem; margin: 1rem 0;}
+
+h1{font-size: 1.5rem; font-weight: bold; margin: 0.5rem 0; }
+h2{font-size: 1.3rem; font-weight: bold; margin: 1rem 0; }
 
 @media only screen and (min-width: 600px){
-    p{font-size: 1.3rem;} /* Större paragrafer vid Desktop */
-    p,h1,h2,h3,h4,h5,h6,li {line-height: 1.9rem;} /* Större radavstånd vid Desktop */
-    h2 {font-size: 1.8rem;} /* Större rubriker vid Desktop */
-    }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.6rem; }
+    p  { font-size: 1.3rem; }
+    p,h1,h2,h3,h4,h5,h6,li { line-height: 1.9rem; }
+}
 
 /* Layout */
 .header{grid-area: header;}
@@ -204,13 +207,14 @@ header nav a.active{
     }
 
     .footerlogo img {
-        width: 150px; /* Gör loggan något mindre vid visning på mobil */
+        width: 170px !important; /* Gör loggan något mindre vid visning på mobil / overridar hårdkodningen i HTMl-footern på Width 300px */
     }
 
     .footerlogo{ /* Återställer loggan till normal placering vid mobilanvändning */
         position: static;
         transform: none;
     }
+
 
     .address{
         margin-left: 0;
@@ -299,4 +303,6 @@ header nav a.active{
     border-radius: 10px;
 }
 /* Ovan är för att få recepten i fin ordning */
+
+
 
