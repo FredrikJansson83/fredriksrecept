@@ -1,0 +1,295 @@
+
+/* Typografi (grundläggande för sidan) */
+html{
+    font-family: "source sans pro", sans-serif;
+    font-size: 100%;
+}
+
+p,h1,h2,h3,h4,h5,h6 {line-height: 1.3rem;} /* Gör texten luftigare och lättare att läsa */
+p{font-size: 1.1rem;}
+h2{font-size: 1.3rem; margin: 1rem 0;}
+
+@media only screen and (min-width: 600px){
+    p{font-size: 1.3rem;} /* Större paragrafer vid Desktop */
+    p,h1,h2,h3,h4,h5,h6,li {line-height: 1.9rem;} /* Större radavstånd vid Desktop */
+    h2 {font-size: 1.8rem;} /* Större rubriker vid Desktop */
+    }
+
+/* Layout */
+.header{grid-area: header;}
+.hero{grid-area: hero;}
+.content{grid-area: content;}
+.footer{grid-area: footer;}
+
+.container{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "hero"
+    "content"
+    "footer";
+    color: #cacfca; /* Sätter färg på texten */
+    margin: 0 auto; /* Centrerar sidan på stora skärmar */
+    max-width: 1200px; /* Ser till att sidan inte skalas över 1200px */
+    padding: 0 20px;
+    width: 100%; /* Sidan fyller mindre skärmar */
+}
+
+.header img {
+    display: block;        /* Tar bort extra utrymme under bilden */
+    height: 200px;          /* Bestäm en fast höjd på loggan */
+    width: auto;           /* Bredden anpassas automatiskt efter höjden */
+}
+
+.header{
+    background-color: #57680e;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 70px;
+}
+
+@media (min-width: 769px) { /* För att få länkarna centrerade vid Desktop */
+    .nav{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex; /* Gör länkarna horisontella */
+        flex-direction: row; /* Tvingar rader */
+        gap: 20px;
+        white-space: nowrap; /* Hindrar radbrytning */
+    }
+}
+
+header nav a{ /* Själva länkarna */
+    color: #f2f2f2;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.burger {
+    display: none;
+    margin-left: auto;
+}
+
+header nav a:hover{ /* Förändring när man hoovrar över länkarna */
+    background-color: #ddd;
+    color: #000;
+}
+
+header nav a.active{
+    background-color: #ddd; /* Belyser den aktuella länken */
+    color: #000;
+}
+
+@media (max-width: 768px) { /* Vid "mobilanvändande" så göms menyn och ersätts av en hamburgermeny */
+
+    .nav { /* Gör att hambuurgermenyn öppnas under headern */
+        display: none;
+        position: absolute;
+        top: 100%;
+        Right: 10px;
+        background-color: #aacc14; /* Sätter färgen på själva drop-down-menyn */
+        padding: 10px;
+        flex-direction: column; /* Gör att länkarna visas vertikalt */
+        
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+        margin-left: auto;
+    }
+
+}
+
+
+/*
+@media only screen and (min-width: 600px){
+    .container{
+        grid-template-columns: 50% auto;
+        grid-template-areas:
+        "header header"
+        "hero hero"
+        "content content"
+        "footer footer";
+        max-width: 960px;
+    }
+}
+    */
+
+.header{
+    flex-direction: row;
+    align-items: center;
+}
+
+/*
+.header > div {
+    width: 50%;
+}
+    */
+
+.hero{  
+    height: 40vh;
+    overflow: hidden;
+}
+
+.hero img{
+    width: 100%;
+    height: 100%; /* Ärver höjden från .hero ovan */
+    object-fit: cover;
+    object-position: center;
+    /* display: block; */
+}
+
+.welcometext{
+    max-width: 700px;
+    margin: 0 auto; /* centrerar textstycket */
+}
+
+
+.content{
+    background-color: #465554; /* Justerar färgen i content */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Så att padding inte gör sektionen bredare */
+}
+
+.footer{ /* Elementen hamnar bredvid varandra horisontellt */
+    display: flex;
+    align-items: center; /* centrerar */
+    position: relative; /* Då sidan har flera saker i sin footer, och jag vill centrera allt behöver jag använda position relative */
+    background-color: #57680e;
+    /* border: 1px dashed white; /* Gör streckade linjer runt elementen för att lättare se under utvecklingen */
+}
+
+.contact{
+    text-align: left; /* Placerar texten till vänster inom rutan. */
+    padding: 10px; /* Ger lite marginal runt texten */
+    /* border: 1px dashed white; /* Gör streckade linjer runt elementen för att lättare se under utvecklingen */
+}
+
+.footerlogo{
+    position: absolute; /* Behövs för att centrera loggan då det finns flera saker i footern */
+    left: 50%; /* För att centrera. Se kommentar ovan */
+    transform: translateX(-50%); /* För att centrera. Se kommentar ovan */
+    /* border: 1px dashed white; /* Gör streckade linjer runt elementen för att lättare se under utvecklingen */
+}
+
+.address{
+    text-align: left; /* Placerar texten till vänster inom rutan. */
+    padding: 10px; /* Ger lite marginal runt texten */
+    margin-left: auto; /* Placerar rutan till höger */
+    /* border: 1px dashed white; /* Gör streckade linjer runt elementen för att lättare se under utvecklingen */
+}
+
+@media (max-width: 768px){
+
+    .footer{
+        flex-direction: column; /* Kontakt, loggan samt adress staplas nu istället på varandra för att kompensera för den mindre upplösningen */
+        align-items: center;
+        gap: 10px;
+
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footerlogo{ /* Återställer loggan till normal placering vid mobilanvändning */
+        position: static;
+        transform: none;
+    }
+
+    .address{
+        margin-left: 0;
+    }
+
+}
+
+/* Nedan är för att få recept-korten att fungera */
+.recipe-grid{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.recipe-card{
+    display: block;
+
+    background-color: #374544;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: transform 0.2s ease;
+
+    max-width: 350px;
+}
+
+.recipe-card:hover{
+    transform: scale(1.03);
+}
+
+.recipe-card img{
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.recipe-card h3{
+    padding: 15px;
+
+    text-align: center;
+}
+/* Ovan är för att få recept-korten att fungera */
+
+
+/* Nedan är för att få recept-sidorna i fin ordning */
+.recipe-layout {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobil: en kolumn */
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (min-width: 600px) {
+    .recipe-layout {
+        grid-template-columns: 1fr 2fr; /* Den högra kolumnens bredd blir dubbelt så bred som den vänstra */
+        grid-template-rows: auto auto;  /* Två rader */
+        grid-template-areas:
+            "description image"
+            "ingredients instructions";
+    }
+
+    .recipe-description { grid-area: description; }
+    .recipe-image       { grid-area: image; }
+    .ingredients        { grid-area: ingredients; }
+    .instructions       { grid-area: instructions; }
+}
+
+.recipe-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zoomar in så att hela rutan täcks */
+    border-radius: 10px;
+}
+/* Ovan är för att få recepten i fin ordning */
+

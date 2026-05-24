@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+   
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fredriks Recept</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="grid.css">
+    </head>
+   
+    <body>
+        <div class="container">
+            <header class="box header">
+                <div>
+                    <img src="bilder/logga.png" class="logo">
+                </div>
+            
+                <div>
+                <nav class="nav">
+                    <a href="index.html" class="active">Hem</a>  <!-- Belyser den aktuella länken på menyn -->
+                    <a href="matlagning.html">Matlagning</a>
+                    <a href="">Bröd</a>
+                    <a href="fika.html">Fika</a>
+                    <a href="">Tips och Tricks</a>
+                </nav>    
+                </div>
+                
+                <button class="burger" id="burger">☰</button>
+            </header>
+       
+            <script> <!-- Script för att få en fungerande hamburgermeny -->
+            const burger = document.getElementById("burger");
+            const nav = document.querySelector(".nav");
+
+            burger.addEventListener("click", () => {
+                nav.classList.toggle("open");
+            });
+            </script>
+
+            <section class="box hero"><img src="bilder/hero.png" class="logo"></section>
+
+            <main class="box content">
+              
+                <div class="welcometext">
+                <h2>Mina recept</h2> 
+                <p>Hej och välkommen till min lilla hemsida om matlagning. Här finner ni enkla, men samtidigt goda recept på både matlagning och bakverk. Utöver detta delar jag med mig av diverse tips och tricks som jag har samlat på mig genom åren.</p>
+                <br><br/>
+                <p>Matlagning behöver inte vara avancerat och man kan med enkla medel spara mycket pengar genom att göra storkok och frysa in.</p>
+                </div>
+
+                <div class="recipe-grid">
+                    <a href="Linsgryta.html" class="recipe-card">
+                    <img src="bilder/mat/linsgryta.jpg" alt="linsgryta">
+                    <h3>Billig linsgryta</h3>
+                    </a>
+
+                    <a href="kycklinggryta.html" class="recipe-card">
+                    <img src="bilder/mat/kycklinggryta.jpg" alt="kycklingryta">
+                    <h3>God kycklingryta</h3>
+                    </a>
+
+                    <a href="tacopaj.html" class="recipe-card">
+                    <img src="bilder/mat/tacopaj.jpg" alt="tacopaj">
+                    <h3>Tacopaj med hetta</h3>
+                    </a>
+                     
+                    <a href="karleksmums.html" class="recipe-card">
+                    <img src="bilder/fika/karleksmums.jpg" alt="karleksmums">
+                    <h3>Kärleksmums</h3>
+                    </a>
+
+                    <a href="snickersrutor.html" class="recipe-card">
+                    <img src="bilder/fika/snickersrutor.jpg" alt="snickersrutor">
+                    <h3>Gudomliga Snickersrutor</h3>
+                    </a>
+
+                    <a href="kolakakor.html" class="recipe-card">
+                    <img src="bilder/fika/kolakakor.jpg" alt="kolakakor">
+                    <h3>Enkla Kolakakor</h3>
+                    </a>
+                </div>      
+            </main>
+            
+            <footer class="box footer">
+                <div class="contact">
+                    <h1>Kontakt:</h1>
+                    <p>E-Post: fredrik.j@icloud.com</p>
+                    <p>Telefon: 070-12 123 123</p>
+                </div>
+                
+                <div class="footerlogo">
+                    <img src="bilder/logga.png" width="300px">
+                </div>
+                
+                <div class="address">
+                    <h1>Adress:</h1>
+                    <p>Fredrik Jansson</p>
+                    <p>Hittepåvägen 5</p>
+                    <p>66334, Hammarö</p>
+                </div>
+            </footer>
+        
+        </div>
+    </body>
+</html>

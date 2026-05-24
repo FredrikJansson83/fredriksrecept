@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+   
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fredriks Recept</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="grid.css">
+    </head>
+   
+    <body>
+        <div class="container">
+            <header class="box header">
+                <div>
+                    <img src="bilder/logga.png" class="logo">
+                </div>
+            
+                <div>
+                <nav class="nav">
+                    <a href="index.html">Hem</a>  <!-- Belyser den aktuella länken på menyn -->
+                    <a href="matlagning.html" class="active">Matlagning</a>
+                    <a href="">Bröd</a>
+                    <a href="fika.html">Fika</a>
+                    <a href="">Tips och Tricks</a>
+                </nav>    
+                </div>
+                
+                <button class="burger" id="burger">☰</button>
+            </header>
+       
+            <script> <!-- Script för att få en fungerande hamburgermeny -->
+            const burger = document.getElementById("burger");
+            const nav = document.querySelector(".nav");
+
+            burger.addEventListener("click", () => {
+                nav.classList.toggle("open");
+            });
+            </script>
+
+            <section class="box hero"><img src="bilder/hero.jpg" class="logo"></section>
+
+            <main class="box content">
+              
+                <div class="recipe-layout">
+                                
+                    <div class="recipe-description">
+                        <h2>Tacopaj med hetta!</h2>
+                        <p>En god tacopaj med egenbakad pajdeg! Förgrädda pajskalet för att få det krispigt. Stek köttfärsen tillsammans med tacokrydda och crème fraiche. Glöm inte att komplettera med en god sallad!</p>
+                        <br></br>
+                        <p>Detta recept avser fyra portioner.</p>
+                    </div>
+                
+                    <div class="recipe-image">
+                       <img src="bilder/mat/tacopaj.jpg" alt="tacopaj"> 
+                    </div>
+
+                    <div class="ingredients">
+                        <h2>Ingridienser:</h2>
+                        <br></br>
+                        <p>Deg</p>
+                             <ul>
+                                <li>Smör eller margarin 50 g</li>
+                                <li>Vetemjöl 3 dl</li>
+                                <li>Kvarg 1 dl (10%)</li>
+                                <li>Kallt vatten 3 msk</li>
+                            </ul>
+                            <br></br>
+                        <p>Fyllning</p>
+                            <ul>
+                                <li>Bland-, vego- eller nötfärs 500 g</li>
+                                <li>Smör eller margarin 1 msk</li>
+                                <li>Taco kryddmix 2 tsk</li>
+                                <li>Vatten 1 dl</li>
+                                <li>Crème fraiche med paprika & chili 2 dl</li>
+                                <li>Körsbärstomater 250 g</li>
+                                <li>Riven ost 2-3 dl</li>
+                            </ul>
+                    </div>
+
+                    <div class="instructions">
+                        <h2>Gör så här:</h2>
+                        <ol>
+                            <li>1. Skala och finhacka lök och vitlök. Skala och finriv ingefäran. Skala och tärna moroten.</li>
+                            <li>2. Hetta upp smör- & rapsolja i en stekgryta eller rymlig kastrull. Fräs lök, vitlök, ingefära och morot 3-4 min.</li>
+                            <li>3. Skölj linserna i kallt vatten. Rör ner linser, tomater, vatten, grädde, smulad buljong och spiskummin i grytan. Låt sjuda tills linserna är mjuka, ca 20 min. Rör om då och då.</li>
+                            <li>4. Koka riset enligt anvisning på förpackningen.</li>
+                            <li>5. Rör ner limesaft i linsgrytan och smaka av med salt.</li>
+                            <li>6. Toppa linsgrytan med klyftade tomater, smulad vitost, grovhackad koriander och cashewnötter.</li>
+                            <li>7. Servera röd linsgryta med nykokt ris.</li>
+                        </ol>
+                    </div>
+                </div>
+
+
+            </main>
+            
+            <footer class="box footer">
+                <div class="contact">
+                    <h1>Kontakt:</h1>
+                    <p>E-Post: fredrik.j@icloud.com</p>
+                    <p>Telefon: 070-12 123 123</p>
+                </div>
+                
+                <div class="footerlogo">
+                    <img src="bilder/logga.png" width="300px">
+                </div>
+                
+                <div class="address">
+                    <h1>Adress:</h1>
+                    <p>Fredrik Jansson</p>
+                    <p>Hittepåvägen 5</p>
+                    <p>66334, Hammarö</p>
+                </div>
+            </footer>
+        
+        </div>
+    </body>
+</html>

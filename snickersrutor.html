@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+   
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fredriks Recept</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="grid.css">
+    </head>
+   
+    <body>
+        <div class="container">
+            <header class="box header">
+                <div>
+                    <img src="bilder/logga.png" class="logo">
+                </div>
+            
+                <div>
+                <nav class="nav">
+                    <a href="index.html">Hem</a>  <!-- Belyser den aktuella länken på menyn -->
+                    <a href="matlagning.html">Matlagning</a>
+                    <a href="">Bröd</a>
+                    <a href="fika.html" class="active">Fika</a>
+                    <a href="">Tips och Tricks</a>
+                </nav>    
+                </div>
+                
+                <button class="burger" id="burger">☰</button>
+            </header>
+       
+            <script> <!-- Script för att få en fungerande hamburgermeny -->
+            const burger = document.getElementById("burger");
+            const nav = document.querySelector(".nav");
+
+            burger.addEventListener("click", () => {
+                nav.classList.toggle("open");
+            });
+            </script>
+
+            <section class="box hero"><img src="bilder/hero.jpg" class="logo"></section>
+
+            <main class="box content">
+              
+                <div class="recipe-layout">
+                                
+                    <div class="recipe-description">
+                        <h2>Gudomliga snickersrutor!</h2>
+                        <p>Här har ni något riktigt gott som är perfekta att frysa in och ta fram när man får besök. Nötiga, sega och fulla av crunch och cholkad. Himmelriket? Ja, jag anser nog det.</p>
+                        <br></br>
+                        <p>Detta recept avser cirka 50 bitar. En go fikastund helt enkelt.</p>
+                    </div>
+                
+                    <div class="recipe-image">
+                       <img src="bilder/fika/snickersrutor.jpg" alt="snickersrutor"> 
+                    </div>
+
+                    <div class="ingredients">
+                        <h2>Ingridienser:</h2>
+                            <ul>
+                                <li>Jordnötssmör med bitar (crunchy) 350 g</li>
+                                <li>Strösocker 1 dl</li>
+                                <li>Ljus sirap 2.5 dl</li>
+                                <li>Vaniljsocker 2 tsk</li>
+                                <li>Cornflakes 10 dl</li>
+                                <li>Kokos 2 dl</li>
+                            </ul>
+                            <br></br>
+                            <p>Till garnering:</p>
+                            <ul>
+                                <li>Choklad 200 g</li>
+                            </ul>
+                            <br></br>
+                            <p>Tips och tricks:</p>
+                            <ul>
+                                <li>Förvaras i en burk med lock - bakplåtspapper mellan lagren</li>
+                                <li>Håller i två månader i kylskåp</li>
+                                <li>Går bra att frysa</li>                                
+                            </ul>
+                    </div>
+                    
+
+                    <div class="instructions">
+                        <h2>Gör så här:</h2>
+                        <ol>
+                            <li>1. Klä en form (20×30 cm) med bakpapper.</li>
+                            <li>2. Rör ihop jordnötssmör, strösocker, sirap och vaniljsocker  i en kastrull. Låt sjuda i ett par minuter</li>
+                            <li>3. Krossa Cornflakesen i en bunke för sig.</li>
+                            <li>4. Rör ner cornflakes och kokos i kastrullen och arbeta ihop en klibbig massa.</li>
+                            <li>5. Tryck ut smeten i formen och ställ in i kylskåpet i 30 minuter.</li>
+                            <li>6. Medan kakan står i kylskåpet så smälter du chokladen över ett vattenbad på låg värme.</li>
+                            <li>7. Bred sedan chokladen över kakan och in i kylskåpet ytterligare en timme innan du skär dem i små rutor.</li>
+                        </ol>
+                    </div>
+                </div>
+
+
+            </main>
+            
+            <footer class="box footer">
+                <div class="contact">
+                    <h1>Kontakt:</h1>
+                    <p>E-Post: fredrik.j@icloud.com</p>
+                    <p>Telefon: 070-12 123 123</p>
+                </div>
+                
+                <div class="footerlogo">
+                    <img src="bilder/logga.png" width="300px">
+                </div>
+                
+                <div class="address">
+                    <h1>Adress:</h1>
+                    <p>Fredrik Jansson</p>
+                    <p>Hittepåvägen 5</p>
+                    <p>66334, Hammarö</p>
+                </div>
+            </footer>
+        
+        </div>
+    </body>
+</html>
