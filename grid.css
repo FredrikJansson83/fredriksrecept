@@ -24,10 +24,6 @@ h2{font-size: 1.3rem; font-weight: bold; margin: 1rem 0; }
 .content{grid-area: content;}
 .footer{grid-area: footer;}
 
-body {
-    overflow-x: hidden; /* Förhindrar sidoscrollning */
-}
-
 .container{
     display: grid;
     grid-template-areas:
@@ -40,6 +36,7 @@ body {
     max-width: 1200px; /* Ser till att sidan inte skalas över 1200px */
     padding: 0 20px;
     width: 100%; /* Sidan fyller mindre skärmar */
+    box-sizing: border-box;
 }
 
 .header img {
