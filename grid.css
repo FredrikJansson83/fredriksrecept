@@ -24,6 +24,10 @@ h2{font-size: 1.3rem; font-weight: bold; margin: 1rem 0; }
 .content{grid-area: content;}
 .footer{grid-area: footer;}
 
+body {
+    overflow-x: hidden; /* Förhindrar sidoscrollning */
+}
+
 .container{
     display: grid;
     grid-template-areas:
