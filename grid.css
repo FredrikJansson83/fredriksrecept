@@ -94,7 +94,7 @@ header nav a.active{
         display: none;
         position: absolute;
         top: 100%;
-        Right: 10px;
+        right: 10px;
         background-color: #aacc14; /* Sätter färgen på själva drop-down-menyn */
         padding: 10px;
         flex-direction: column; /* Gör att länkarna visas vertikalt */
@@ -140,7 +140,10 @@ header nav a.active{
 
 .hero{  
     height: 40vh;
+    width: 100%;
+    box-sizing: border-box;
     overflow: hidden;
+
 }
 
 .hero img{
