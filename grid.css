@@ -87,7 +87,7 @@ header nav a.active{
 
 @media (max-width: 768px) { /* Vid "mobilanvändande" så göms menyn och ersätts av en hamburgermeny */
 
-    .nav { /* Gör att hambuurgermenyn öppnas under headern */
+    .nav { /* Gör att hamburgermenyn öppnas under headern */
         display: none;
         position: absolute;
         top: 100%;
@@ -194,10 +194,17 @@ header nav a.active{
     .footer{
         flex-direction: column; /* Kontakt, loggan samt adress staplas nu istället på varandra för att kompensera för den mindre upplösningen */
         align-items: center;
-        gap: 10px;
-
+        gap: 5px; /* Ställer in mellanrummet mellan elementen. */
         text-align: center;
         padding: 10px;
+    }
+
+    .contact, .adress{
+        padding: 5px; /* Minskar utrymmet runt kontakt och adress */
+    }
+
+    .footerlogo img {
+        width: 150px; /* Gör loggan något mindre vid visning på mobil */
     }
 
     .footerlogo{ /* Återställer loggan till normal placering vid mobilanvändning */
