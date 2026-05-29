@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+   
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fredriks Recept</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="grid.css">
+    </head>
+   
+    <body>
+        <div class="container">
+            <header class="box header">
+                <div>
+                    <img src="bilder/logga.png" class="logo">
+                </div>
+            
+                <div>
+                <nav class="nav">
+                    <a href="index.html">Hem</a>
+                    <a href="matlagning.html">Matlagning</a>
+                    <a href="brod.html">Bröd</a>
+                    <a href="fika.html">Fika</a>
+                    <a href="tipsotricks.html" class="active">Tips och Tricks</a> <!-- Belyser den aktuella länken på menyn -->
+                </nav>    
+                </div>
+                
+                <button class="burger" id="burger">☰</button>
+            </header>
+       
+            <script> <!-- Script för att få en fungerande hamburgermeny -->
+            const burger = document.getElementById("burger");
+            const nav = document.querySelector(".nav");
+
+            burger.addEventListener("click", () => {
+                nav.classList.toggle("open");
+            });
+            </script>
+
+            <section class="box hero"><img src="bilder/hero.png" class="logo"></section>
+
+            <main class="box content">
+
+                <div class="welcometext">
+                    <p>Tips & Tricks!</p>
+                </div>
+
+                <h2>Krispigare rotfrukter</h2>
+                <p>Stärkelsen gör att ytan torkar och blir krispig, nästan som ugnsrostad potatis på restaurang.</p>
+                <ul>
+                    <li>1. Sätt ugnen på 200 grader (220 grader varmluft)</li>
+                    <li>2. Skär rotfrukterna i bitar.</li>                
+                    <li>3. Lägg dem i en skål och tillsätt:</li>
+                    <li>&bull; 1-2 msk olja </li>
+                    <li>&bull; 1-2 tsk potatismjöl / majsstärkelse</li>
+                    <li>&bull; Salt och peppar.</li>
+                    <li>4. Blanda runt ordentligt</li>
+                    <li>5. Sprid ut på en plåt. Se till att de inte ligger för tätt.</li>
+                    <li>6. Kör i ugnen i 25-35 min. Vänd runt efter halva tiden.</li>
+                </ul>
+
+                <h2>Krutonger av brödskalkar</h2>
+                <p>Har ni frysen full av brödskalkar som ingen vill äta upp? Perfekt! Då kan man enkelt göra om dem till goda krutonger. Perfekt att ha i sallader och soppor. Bidrar till god crunch och ger ett lyxigare intryck.</p>
+                <ul>
+                    <li>1. Sätt ugnen på 200 grader</li>
+                    <li>2. Skär brödskalkarna i bitar.</li>                
+                    <li>3. Strö över:</li>
+                    <li>&bull; Olivolja </li>
+                    <li>&bull; Salt & peppar</li>
+                    <li>&bull; Vitlök (om man är modig!).</li>
+                    <li>4. Blanda runt ordentligt</li>
+                    <li>5. Kör i ugn 200 grader i cirka 20-30 min.</li>
+                </ul>
+
+                <h2>Inläggning 1-2-3 lag</h2>
+                <p>Pickla t.ex. rödlök, morotsremsor eller annat som är skoj att pickla. Blanda med följande:</p>
+                <ul>
+                    <li>1. Ättiksprit 1 dl</li>
+                    <li>2. Socer 2 dl.</li>                
+                    <li>3. Vatten 3 dl.</li>
+                    <li>4. Låt stå i kylen i cirka 1 dygn.</li>
+                </ul>
+
+                
+            </main>
+            
+            <footer class="box footer">
+                <div class="contact">
+                    <h1>Kontakt:</h1>
+                    <p>E-Post: fredrik.j@icloud.com</p>
+                    <p>Telefon: 070-12 123 123</p>
+                </div>
+                
+                <div class="footerlogo">
+                    <img src="bilder/logga.png" width="300px">
+                </div>
+                
+                <div class="address">
+                    <h1>Adress:</h1>
+                    <p>Fredrik Jansson</p>
+                    <p>Hittepåvägen 5</p>
+                    <p>66334, Hammarö</p>
+                </div>
+            </footer>
+        
+        </div>
+    </body>
+</html>
