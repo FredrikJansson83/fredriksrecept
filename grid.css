@@ -5,7 +5,7 @@ html{
     font-size: 100%;
 }
 
-p,h3,h4,h5,h6, li {line-height: 1.3rem;} /* Gör texten luftigare och lättare att läsa */
+p,h3,h4,h5,h6,li {line-height: 1.3rem;} /* Gör texten luftigare och lättare att läsa */
 p{font-size: 1.1rem;}
 
 h1{font-size: 1.5rem; font-weight: bold; margin: 0.5rem 0; }
@@ -24,7 +24,7 @@ p {
 }
 
 li {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.4rem; /* Ger litet mellanrum mellan varje punkt */
 }
 
 /* Layout */
