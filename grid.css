@@ -142,7 +142,7 @@ header nav a.active{
 .hero{  
     height: 40vh;
     width: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ser till att man inte kan scrolla i sidled */
     overflow: hidden;
 
 }
@@ -308,5 +308,29 @@ header nav a.active{
 }
 /* Ovan är för att få recepten i fin ordning */
 
+/* Nedan är för att få Tips-och-Tricks sidan i fin ordning */
+.tips-grid {
+    display: grid;
+    grid-template-columns: 1fr;  /* Mobil: en kolumn */
+    gap: 20px;
+    padding: 20px;
+}
 
+@media (min-width: 600px) {
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);  /* iPad: två kolumner */
+    }
+}
 
+@media (min-width: 1024px) {
+    .tips-grid {
+        grid-template-columns: repeat(4, 1fr);  /* Desktop: fyra kolumner */
+    }
+}
+
+.tips-card {
+    background-color: #374544;
+    border-radius: 10px;
+    padding: 20px;
+}
+/* Ovan är för att få Tips-och-Tricks sidan i fin ordning */
