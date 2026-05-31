@@ -5,13 +5,13 @@ html{
     font-size: 100%;
 }
 
-p,h3,h4,h5,h6 {line-height: 1.3rem;} /* Gör texten luftigare och lättare att läsa */
+p,h3,h4,h5,h6, li {line-height: 1.3rem;} /* Gör texten luftigare och lättare att läsa */
 p{font-size: 1.1rem;}
 
 h1{font-size: 1.5rem; font-weight: bold; margin: 0.5rem 0; }
 h2{font-size: 1.3rem; font-weight: bold; margin: 1rem 0; }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 600px){ /* Desktop */
     h1 { font-size: 1.8rem; }
     h2 { font-size: 1.6rem; }
     p  { font-size: 1.3rem; }
@@ -23,6 +23,9 @@ p {
     hyphens: auto;  /* Delar av ord med bindestreck vid radbrytning då marginalställd text kan se konstigt ut på små skärmar (korta rader / mellanrum mellan orden blir stora och ojämna) */
 }
 
+li {
+    margin-bottom: 0.4rem;
+}
 
 /* Layout */
 .header{grid-area: header;}
