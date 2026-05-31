@@ -18,6 +18,12 @@ h2{font-size: 1.3rem; font-weight: bold; margin: 1rem 0; }
     p,h1,h2,h3,h4,h5,h6,li { line-height: 1.9rem; }
 }
 
+p {
+    text-align: justify; /* För att få all brödtext marginalställd */
+    hyphens: auto;  /* Delar av ord med bindestreck vid radbrytning då marginalställd text kan se konstigt ut på små skärmar (korta rader / mellanrum mellan orden blir stora och ojämna) */
+}
+
+
 /* Layout */
 .header{grid-area: header;}
 .hero{grid-area: hero;}
@@ -324,13 +330,13 @@ header nav a.active{
 
 @media (min-width: 1024px) {
     .tips-grid {
-        grid-template-columns: repeat(4, 1fr);  /* Desktop: fyra kolumner */
+        grid-template-columns: repeat(3, 1fr);  /* Desktop: fyra kolumner */
     }
 }
 
 .tips-card {
     background-color: #374544;
     border-radius: 10px;
-    padding: 30px; /* Bestämmer rutans bredd */
+    padding: 20px; /* Bestämmer padding runt rutna och texten */
 }
 /* Ovan är för att få Tips-och-Tricks sidan i fin ordning */
