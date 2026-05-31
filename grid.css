@@ -331,6 +331,6 @@ header nav a.active{
 .tips-card {
     background-color: #374544;
     border-radius: 10px;
-    padding: 20px;
+    padding: 30px; /* Bestämmer rutans bredd */
 }
 /* Ovan är för att få Tips-och-Tricks sidan i fin ordning */
