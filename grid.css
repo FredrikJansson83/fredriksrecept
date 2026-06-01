@@ -100,7 +100,7 @@ header nav a.active{
 
 @media (min-width: 769px) and (max-width: 1024px) { /* Så att menyn i header blir lite mindre så det inte täcker loggan till vänster på iPad i vertikalt läge */
     header nav a {
-        font-size: 0.9em;  /* Lite mindre text 0.7 först */
+        font-size: 0.8em;  /* Lite mindre text 0.7 först */
         padding: 0.3em;    /* Mindre padding runt länkarna */
     }
 
