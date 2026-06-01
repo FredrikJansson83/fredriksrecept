@@ -43,7 +43,7 @@ li {
     color: #cacfca; /* Sätter färg på texten */
     margin: 0 auto; /* Centrerar sidan på stora skärmar */
     max-width: 1200px; /* Ser till att sidan inte skalas över 1200px */
-    padding: 0 20px;
+    padding: 0 20px; /* För att få lite luft mot kanterna på mobil / surfplatta */
     width: 100%; /* Sidan fyller mindre skärmar */
     box-sizing: border-box;
 }
@@ -84,7 +84,7 @@ header nav a{ /* Själva länkarna */
 }
 
 .burger {
-    display: none;
+    display: none; /* Gömmer hamburgermenyn */
     margin-left: auto;
 }
 
@@ -100,12 +100,12 @@ header nav a.active{
 
 @media (min-width: 769px) and (max-width: 1024px) { /* Så att menyn i header blir lite mindre så det inte täcker loggan till vänster på iPad i vertikalt läge */
     header nav a {
-        font-size: 0.8em;  /* Lite mindre text 0.7 först */
-        padding: 0.3em;    /* Mindre padding runt länkarna */
+        font-size: 0.8em;  /* Lite mindre text för att få plats tillsammans med loggan */
+        padding: 0.3em;    /* Mindre padding runt länkarna för att få plats tillsammans med loggan */
     }
 
     .nav {
-        gap: 10px;  /* Mindre mellanrum mellan länkarna */
+        gap: 10px;  /* Mindre mellanrum mellan länkarna för att få plats tillsammans med loggan */
     }
 }
 
@@ -133,12 +133,10 @@ header nav a.active{
 
 }
 
-
 .header{
     flex-direction: row;
     align-items: center;
 }
-
 
 .hero{  
     height: 40vh;
@@ -153,14 +151,12 @@ header nav a.active{
     height: 100%; /* Ärver höjden från .hero ovan */
     object-fit: cover;
     object-position: center;
-    /* display: block; */
 }
 
 .welcometext{
     max-width: 700px;
     margin: 0 auto; /* centrerar textstycket */
 }
-
 
 .content{
     background-color: #465554; /* Justerar färgen i content */
@@ -174,27 +170,24 @@ header nav a.active{
     align-items: center; /* centrerar */
     position: relative; /* Då sidan har flera saker i sin footer, och jag vill centrera allt behöver jag använda position relative */
     background-color: #57680e;
-    padding: 25px 30px;
+    padding: 25px 0px;
 }
 
 .contact{
     text-align: left; /* Placerar texten till vänster inom rutan. */
-    padding: 10px; /* Ger lite marginal runt texten */
-    /* border: 1px dashed white; /* Gör streckade linjer runt elementen för att lättare se under utvecklingen */
+    padding: 5px 10px; /* Ger lite marginal runt texten */
 }
 
 .footerlogo{
     position: absolute; /* Behövs för att centrera loggan då det finns flera saker i footern */
     left: 50%; /* För att centrera. Se kommentar ovan */
     transform: translateX(-50%); /* För att centrera. Se kommentar ovan */
-    /* border: 1px dashed white; /* Gör streckade linjer runt elementen för att lättare se under utvecklingen */
 }
 
 .address{
     text-align: left; /* Placerar texten till vänster inom rutan. */
-    padding: 10px; /* Ger lite marginal runt texten */
+    padding: 5px 10px; /* Ger lite marginal runt texten */
     margin-left: auto; /* Placerar rutan till höger */
-    /* border: 1px dashed white; /* Gör streckade linjer runt elementen för att lättare se under utvecklingen */
 }
 
 @media (max-width: 768px){
@@ -212,7 +205,7 @@ header nav a.active{
     }
 
     .footerlogo img {
-        width: 170px !important; /* Gör loggan något mindre vid visning på mobil / overridar hårdkodningen i HTMl-footern på Width 300px */
+        width: 170px !important; /* Gör loggan något mindre vid visning på mobil / overridar hårdkodningen i HTMl-footern på Width 300 */
     }
 
     .footerlogo{ /* Återställer loggan till normal placering vid mobilanvändning */
@@ -226,9 +219,6 @@ header nav a.active{
     }
 
 }
-
-
-
 
 /* Nedan är för att få recept-korten att fungera */
 .recipe-grid{
@@ -280,7 +270,6 @@ header nav a.active{
 }
 /* Ovan är för att få recept-korten att fungera */
 
-
 /* Nedan är för att få recept-sidorna i fin ordning */
 .recipe-layout {
     display: grid;
@@ -312,7 +301,7 @@ header nav a.active{
 }
 /* Ovan är för att få recepten i fin ordning */
 
-/* Nedan är för att få Tips-och-Tricks sidan i fin ordning */
+/* Nedan är för att få Tips sidan i fin ordning */
 .tips-grid {
     display: grid;
     grid-template-columns: 1fr;  /* Mobil: en kolumn */
@@ -322,13 +311,13 @@ header nav a.active{
 
 @media (min-width: 600px) {
     .tips-grid {
-        grid-template-columns: repeat(2, 1fr);  /* iPad: två kolumner */
+        grid-template-columns: repeat(2, 1fr);  /* Två kolumner på äldre iPad */
     }
 }
 
 @media (min-width: 1024px) {
     .tips-grid {
-        grid-template-columns: repeat(3, 1fr);  /* Desktop: fyra kolumner */
+        grid-template-columns: repeat(3, 1fr);  /* Fyra kolumner på Desktop */
     }
 }
 
