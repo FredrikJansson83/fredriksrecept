@@ -98,10 +98,9 @@ header nav a.active{
     color: #000;
 }
 
-
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) { /* Så att menyn i header blir lite mindre så det inte täcker loggan till vänster på iPad i vertikalt läge */
     header nav a {
-        font-size: 0.7em;  /* Lite mindre text */
+        font-size: 0.9em;  /* Lite mindre text 0.7 först */
         padding: 0.3em;    /* Mindre padding runt länkarna */
     }
 
@@ -109,8 +108,6 @@ header nav a.active{
         gap: 10px;  /* Mindre mellanrum mellan länkarna */
     }
 }
-
-
 
 @media (max-width: 768px) { /* Vid "mobilanvändande" så göms menyn och ersätts av en hamburgermeny */
 
