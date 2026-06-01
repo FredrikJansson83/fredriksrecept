@@ -98,6 +98,20 @@ header nav a.active{
     color: #000;
 }
 
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    header nav a {
+        font-size: 0.7em;  /* Lite mindre text */
+        padding: 0.3em;    /* Mindre padding runt länkarna */
+    }
+
+    .nav {
+        gap: 10px;  /* Mindre mellanrum mellan länkarna */
+    }
+}
+
+
+
 @media (max-width: 768px) { /* Vid "mobilanvändande" så göms menyn och ersätts av en hamburgermeny */
 
     .nav { /* Gör att hamburgermenyn öppnas under headern */
@@ -163,7 +177,7 @@ header nav a.active{
     align-items: center; /* centrerar */
     position: relative; /* Då sidan har flera saker i sin footer, och jag vill centrera allt behöver jag använda position relative */
     background-color: #57680e;
-    /* border: 1px dashed white; /* Gör streckade linjer runt elementen för att lättare se under utvecklingen */
+    padding: 25px 30px;
 }
 
 .contact{
@@ -215,6 +229,9 @@ header nav a.active{
     }
 
 }
+
+
+
 
 /* Nedan är för att få recept-korten att fungera */
 .recipe-grid{
