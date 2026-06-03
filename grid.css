@@ -228,7 +228,7 @@ header nav a.active{
         margin-left: 0;
     }
 
-    .footer-minimal {
+    .footer-minimal { /* För att overrida så att footer inte blir så stor på kontaktsidan då det enbart är loggan i den där */
         flex-direction: row !important;  /* Hindrar vertikal stapling */
         justify-content: center;
         padding: 5px 0 !important;
