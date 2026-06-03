@@ -18,6 +18,17 @@ h2{font-size: 1.3rem; font-weight: bold; margin: 1rem 0; }
     p,h1,h2,h3,h4,h5,h6,li { line-height: 1.9rem; }
 }
 
+.footer h1 {
+    font-size: 1rem;      /* Mindre rubrik i footern */
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.footer p, .footer a {
+    font-size: 0.85rem;   /* Mindre brödtext i footern */
+    line-height: 1.4rem;
+}
+
 p {
     text-align: justify; /* För att få all brödtext marginalställd */
     hyphens: auto;  /* Delar av ord med bindestreck vid radbrytning då marginalställd text kan se konstigt ut på små skärmar (korta rader / mellanrum mellan orden blir stora och ojämna) */
@@ -220,6 +231,10 @@ header nav a.active{
 
 }
 
+.footer{
+    padding: 15px; /* Få in kontakt och adress något från sidorna */
+}
+
 /* Nedan är för att få recept-korten att fungera */
 .recipe-grid{
     display: grid;
@@ -327,3 +342,27 @@ header nav a.active{
     padding: 20px; /* Bestämmer padding runt rutna och texten */
 }
 /* Ovan är för att få Tips-och-Tricks sidan i fin ordning */
+
+/* För att få länkarna på kontakt-sidan i samma storlek och utseende som övrig text */
+.tips-card a {
+    color: #cacfca;        /* Samma färg som övrig text */
+    text-decoration: none; /* Tar bort understrykningen */
+}
+
+.tips-card a:hover {
+    text-decoration: underline; /* Så att länken strycks under när man för muspekaren över den (indikation att det är en klickbar länk). */
+}
+
+/* För att få mail-länken i footern i samma storlek och utseende som övrig text */
+.footer a {
+    color: #cacfca;
+    text-decoration: none;
+}
+
+.footer a:hover { /* Så att länken strycks under när man för muspekaren över den (indikation att det är en klickbar länk). */
+    text-decoration: underline;
+}
+
+.footer-minimal {
+    padding: 50px 0;  /* Ger footern mer höjd på kontaktsidan då jag tagot bort Telefonnr / E-Post samt adress från footern. */
+}
