@@ -366,3 +366,7 @@ header nav a.active{
 .footer-minimal {
     padding: 50px 0;  /* Ger footern mer höjd på kontaktsidan då jag tagot bort Telefonnr / E-Post samt adress från footern. */
 }
+
+.footer-hide { /* Gömmer de tomma divvarna kontakt och adress i kontakt.html då denna info ligger i main-content här */
+    display: none;
+}
