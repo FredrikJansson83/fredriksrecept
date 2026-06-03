@@ -224,9 +224,16 @@ header nav a.active{
         transform: none;
     }
 
-
     .address{
         margin-left: 0;
+    }
+
+    .footer-minimal {
+        flex-direction: row !important;  /* Hindrar vertikal stapling */
+        justify-content: center;
+        padding: 5px 0 !important;
+        gap: 0 !important;
+        min-height: unset !important;
     }
 
 }
