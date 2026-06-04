@@ -46,7 +46,7 @@ li {
 
 .container{
     display: grid;
-    grid-template-areas:
+    grid-template-areas: /* Delar upp sidans grundlayout som ett rutnät med fyra rader */
     "header"
     "hero"
     "content"
@@ -56,7 +56,7 @@ li {
     max-width: 1200px; /* Ser till att sidan inte skalas över 1200px */
     padding: 0 20px; /* För att få lite luft mot kanterna på mobil / surfplatta */
     width: 100%; /* Sidan fyller mindre skärmar */
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ser till att padding räknas in i bredden så att sidan inte blir bredare än 100% */
 }
 
 .header img {
@@ -66,12 +66,12 @@ li {
 }
 
 .header{
-    background-color: #57680e;
-    position: relative;
-    display: flex;
-    align-items: center;
+    background-color: #57680e; /* Olivgrön */
+    position: relative; /* Krävs för att kunna positionera nav-länkarna absolut inuti headern */
+    display: flex; /* Flexbox för att rada upp logga, nav och hamburgerknapp horisontellt */
+    align-items: center; /* Centrerar elementen vertikalt i headern */
     padding: 10px;
-    height: 70px;
+    height: 70px; /* Fast höjd på headern */
 }
 
 @media (min-width: 769px) { /* För att få länkarna centrerade vid Desktop */
@@ -211,7 +211,7 @@ header nav a.active{
         padding: 10px;
     }
 
-    .contact, .adress{
+    .contact, .address{
         padding: 5px; /* Minskar utrymmet runt kontakt och adress */
     }
 
@@ -228,7 +228,7 @@ header nav a.active{
         margin-left: 0;
     }
 
-    .footer-minimal { /* För att overrida så att footer inte blir så stor på kontaktsidan då det enbart är loggan i den där */
+    .footer-minimal { /* För att overrida så att footer inte blir så stor på kontaktsidan då det enbart är loggan som ligger i footern på den sidan. */
         flex-direction: row !important;  /* Hindrar vertikal stapling */
         justify-content: center;
         padding: 5px 0 !important;
@@ -242,7 +242,7 @@ header nav a.active{
     padding: 15px; /* Få in kontakt och adress något från sidorna */
 }
 
-/* Nedan är för att få recept-korten att fungera */
+/* Nedan är för att få recept-korten att fungera (Genererat av AI)*/
 .recipe-grid{
     display: grid;
 
@@ -290,9 +290,9 @@ header nav a.active{
 
     text-align: center;
 }
-/* Ovan är för att få recept-korten att fungera */
+/* Ovan är för att få recept-korten att fungera (genererat av AI) */
 
-/* Nedan är för att få recept-sidorna i fin ordning */
+/* Nedan är för att få recept-sidorna i fin ordning (genererat av AI, men har ändrat värden i grid-templete-columns)*/
 .recipe-layout {
     display: grid;
     grid-template-columns: 1fr; /* Mobil: en kolumn */
@@ -321,9 +321,9 @@ header nav a.active{
     object-fit: cover; /* Zoomar in så att hela rutan täcks */
     border-radius: 10px;
 }
-/* Ovan är för att få recepten i fin ordning */
+/* Ovan är för att få recepten i fin ordning (genererat av AI, men har ändrat värden i grid-templete-columns) */
 
-/* Nedan är för att få Tips sidan i fin ordning */
+/* Nedan är för att få Tips-sidan i fin ordning (genererat av AI). */
 .tips-grid {
     display: grid;
     grid-template-columns: 1fr;  /* Mobil: en kolumn */
@@ -348,7 +348,7 @@ header nav a.active{
     border-radius: 10px;
     padding: 20px; /* Bestämmer padding runt rutna och texten */
 }
-/* Ovan är för att få Tips-och-Tricks sidan i fin ordning */
+/* Ovan är för att få Tips-och-Tricks sidan i fin ordning (genererat av AI) */
 
 /* För att få länkarna på kontakt-sidan i samma storlek och utseende som övrig text */
 .tips-card a {
@@ -374,6 +374,6 @@ header nav a.active{
     padding: 50px 0;  /* Ger footern mer höjd på kontaktsidan då jag tagot bort Telefonnr / E-Post samt adress från footern. */
 }
 
-.footer-hide { /* Gömmer de tomma divvarna kontakt och adress i kontakt.html då denna info ligger i main-content här */
+.footer-hide { /* Gömmer de tomma divvarna kontakt och adress i kontakt.html då denna info ligger i main-content på denna sida. */
     display: none;
 }
